@@ -41,12 +41,11 @@ public class ThunderStrengthEventHandler {
         }
 
         com.mojang.logging.LogUtils.getLogger().info("DEBUG DAMAGE: Source ID: " + event.getSource().getMsgId());
-        event.getSource().typeHolder().unwrapKey().ifPresent(key -> 
-            com.mojang.logging.LogUtils.getLogger().info("DEBUG DAMAGE: Type Key: " + key.location())
-        );
+        event.getSource().typeHolder().unwrapKey().ifPresent(
+                key -> com.mojang.logging.LogUtils.getLogger().info("DEBUG DAMAGE: Type Key: " + key.location()));
 
-        // Проверяем, что урон от молнии и ID источника напрямую
-        if (event.getSource().is(DamageTypeTags.IS_LIGHTNING) || event.getSource().getMsgId().equals("lightning_bolt") || event.getSource().getMsgId().contains("lightning")) {
+        if (event.getSource().is(DamageTypeTags.IS_LIGHTNING) || event.getSource().getMsgId().equals("lightning_bolt")
+                || event.getSource().getMsgId().contains("lightning")) {
             applyRingEffect(event.getEntity());
         }
     }
@@ -65,7 +64,6 @@ public class ThunderStrengthEventHandler {
             if (player.distanceTo(struckEntity) <= TRIGGER_RADIUS) {
                 CuriosApi.getCuriosInventory(player).ifPresent(handler -> {
                     handler.findFirstCurio(ModItems.THUNDER_STRENGTH_RING.get()).ifPresent(slotResult -> {
-                        // Сила 2 на 10 секунд (200 тиков)
                         player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 1));
                     });
                 });

@@ -1,6 +1,9 @@
 {
     "replace": false,
     "values": [
-        "lotaartifacts:armor_piercing_glove"
+        "lotaartifacts:armor_piercing_glove",
+        "lotaartifacts:regen_on_poison_glove",
+        "lotaartifacts:impact_glove",
+        "lotaartifacts:shatter_strengthening_gauntlet"
     ]
 }

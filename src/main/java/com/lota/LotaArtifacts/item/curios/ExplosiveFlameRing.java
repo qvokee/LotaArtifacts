@@ -18,16 +18,14 @@ import java.util.Random;
 
 public class ExplosiveFlameRing extends Item implements ICurioItem {
 
-    // 20% = 0.20
     private static final float PROC_CHANCE = 0.20f;
 
     private static final double SPREAD_RADIUS = 5.0;
-    
-    // 20 тиков = 1 секунда
+
     private static final int FIRE_DURATION_TICKS = 100;
 
     private static final float BONUS_DAMAGE_MULTIPLIER = 0.50f;
-    
+
     private final Random random = new Random();
 
     public ExplosiveFlameRing(Properties properties) {
@@ -47,7 +45,7 @@ public class ExplosiveFlameRing extends Item implements ICurioItem {
         if (random.nextFloat() > PROC_CHANCE) {
             return originalDamage;
         }
-        
+
         Level level = attacker.level();
         if (level.isClientSide()) {
             return originalDamage;
@@ -68,11 +66,10 @@ public class ExplosiveFlameRing extends Item implements ICurioItem {
                 LivingEntity.class,
                 searchBox,
                 entity -> entity != center &&
-                          entity != attacker &&
-                          entity.isAlive() &&
-                          !entity.fireImmune() &&
-                          isValidTarget(entity, attacker)
-        );
+                        entity != attacker &&
+                        entity.isAlive() &&
+                        !entity.fireImmune() &&
+                        isValidTarget(entity, attacker));
 
         for (LivingEntity entity : nearbyEntities) {
             double distance = entity.distanceTo(center);
@@ -93,7 +90,7 @@ public class ExplosiveFlameRing extends Item implements ICurioItem {
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
         super.appendHoverText(stack, level, tooltip, flag);
-        
+
         tooltip.add(Component.literal(""));
         tooltip.add(Component.translatable("item.lotaartifacts.explosive_flame_ring.tooltip.title")
                 .withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD));

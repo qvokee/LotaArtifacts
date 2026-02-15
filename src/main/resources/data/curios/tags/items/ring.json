@@ -2,6 +2,18 @@
     "replace": false,
     "values": [
         "lotaartifacts:explosive_flame_ring",
-        "lotaartifacts:thunder_strength_ring"
+        "lotaartifacts:thunder_strength_ring",
+        "lotaartifacts:vampire_ring",
+        "lotaartifacts:loot_ring",
+        "lotaartifacts:critical_elevation_ring",
+        "lotaartifacts:orvius_unbreakability_ring",
+        "lotaartifacts:poisonous_bite_ring",
+        "lotaartifacts:nightmare_slayer_ring",
+        "lotaartifacts:hidden_potential_ring",
+        "lotaartifacts:death_cult_ring",
+        "lotaartifacts:earthquake_ring",
+        "lotaartifacts:nexagon_ring",
+        "lotaartifacts:venomous_hatred_ring",
+        "lotaartifacts:asura_ring"
     ]
 }

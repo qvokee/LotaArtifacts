@@ -30,26 +30,29 @@ public class ArmorPiercingGlove extends Item implements ICurioItem {
     }
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
-        Multimap<Attribute, AttributeModifier> modifiers = ICurioItem.super.getAttributeModifiers(slotContext, uuid, stack);
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid,
+            ItemStack stack) {
+        Multimap<Attribute, AttributeModifier> modifiers = ICurioItem.super.getAttributeModifiers(slotContext, uuid,
+                stack);
 
-        // Динамически ищем атрибут EpicFight armor_negation
         try {
-            Attribute armorNegation = ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("epicfight", "armor_negation"));
+            Attribute armorNegation = ForgeRegistries.ATTRIBUTES
+                    .getValue(new ResourceLocation("epicfight", "armor_negation"));
             if (armorNegation != null) {
-                modifiers.put(armorNegation, new AttributeModifier(UUID.fromString("e5c3b2a1-0000-0000-0000-000000000000"), 
-                        "Armor Piercing Glove Bonus", 100.0, AttributeModifier.Operation.ADDITION));
+                modifiers.put(armorNegation,
+                        new AttributeModifier(UUID.fromString("e5c3b2a1-0000-0000-0000-000000000000"),
+                                "Armor Piercing Glove Bonus", 100.0, AttributeModifier.Operation.ADDITION));
             }
         } catch (Exception e) {
         }
-        
+
         return modifiers;
     }
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
         super.appendHoverText(stack, level, tooltip, flag);
-        
+
         tooltip.add(Component.literal(""));
         tooltip.add(Component.translatable("item.lotaartifacts.armor_piercing_glove.tooltip.title")
                 .withStyle(ChatFormatting.RED, ChatFormatting.BOLD));
