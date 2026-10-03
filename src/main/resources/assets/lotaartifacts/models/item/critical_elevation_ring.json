@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/ring/critical_elevation_ring/critical_elevation_ring"
+  }
+}

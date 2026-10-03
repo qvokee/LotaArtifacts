@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/amulet/blood_cult_amulet/blood_cult_amulet"
+  }
+}

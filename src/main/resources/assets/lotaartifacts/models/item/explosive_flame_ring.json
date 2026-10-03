@@ -1,6 +1,6 @@
-{
+﻿{
   "parent": "item/generated",
   "textures": {
-    "layer0": "lotaartifacts:item/explosive_flame_ring"
+    "layer0": "lotaartifacts:item/ring/explosive_flame_ring/explosive_flame_ring"
   }
 }

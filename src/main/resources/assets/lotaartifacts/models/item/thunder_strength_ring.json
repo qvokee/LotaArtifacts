@@ -1,6 +1,6 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "lotaartifacts:item/thunder_strength_ring"
-    }
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/ring/thunder_strength_ring/thunder_strength_ring"
+  }
 }

@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/amulet/magic_reflection_amulet/magic_reflection_amulet"
+  }
+}

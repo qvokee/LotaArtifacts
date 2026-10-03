@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/ring/rotten_wound_ring/rotten_wound_ring"
+  }
+}

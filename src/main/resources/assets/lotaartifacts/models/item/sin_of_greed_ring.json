@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/ring/sin_of_greed_ring/sin_of_greed_ring"
+  }
+}

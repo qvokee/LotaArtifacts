@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/ring/meldrin_ring/meldrin_ring"
+  }
+}

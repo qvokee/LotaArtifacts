@@ -1,6 +1,6 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "lotaartifacts:item/mana_restoration_necklace"
-    }
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/necklace/mana_restoration_necklace/mana_restoration_necklace"
+  }
 }

@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/amulet/gift_and_curse_amulet/gift_and_curse_amulet"
+  }
+}

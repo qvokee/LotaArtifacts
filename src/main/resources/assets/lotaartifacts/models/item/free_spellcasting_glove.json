@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/glove/free_spellcasting_glove/free_spellcasting_glove"
+  }
+}

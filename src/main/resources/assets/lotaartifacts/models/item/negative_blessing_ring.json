@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/ring/negative_blessing_ring/negative_blessing_ring"
+  }
+}

@@ -20,46 +20,59 @@ import java.util.UUID;
 
 public class ArmorPiercingGlove extends Item implements ICurioItem {
 
-    public ArmorPiercingGlove(Properties properties) {
-        super(properties);
-    }
-
-    @Override
-    public boolean canEquip(SlotContext slotContext, ItemStack stack) {
-        return slotContext.identifier().equals("hands");
-    }
-
-    @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid, ItemStack stack) {
-        Multimap<Attribute, AttributeModifier> modifiers = ICurioItem.super.getAttributeModifiers(slotContext, uuid, stack);
-
-        try {
-            Attribute armorNegation = ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("epicfight", "armor_negation"));
-            if (armorNegation != null) {
-                modifiers.put(armorNegation, new AttributeModifier(UUID.fromString("e5c3b2a1-0000-0000-0000-000000000000"), 
-                        "Armor Piercing Glove Bonus", 100.0, AttributeModifier.Operation.ADDITION));
-            }
-        } catch (Exception e) {
+        public ArmorPiercingGlove(Properties properties) {
+                super(properties);
         }
-        
-        return modifiers;
-    }
 
-    @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
-        super.appendHoverText(stack, level, tooltip, flag);
-        
-        tooltip.add(Component.literal(""));
-        tooltip.add(Component.translatable("item.lotaartifacts.armor_piercing_glove.tooltip.title")
-                .withStyle(ChatFormatting.RED, ChatFormatting.BOLD));
-        tooltip.add(Component.translatable("item.lotaartifacts.armor_piercing_glove.tooltip.line1")
-                .withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.translatable("item.lotaartifacts.armor_piercing_glove.tooltip.line2_1")
-                .withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.translatable("item.lotaartifacts.armor_piercing_glove.tooltip.line2_2")
-                .withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.literal(""));
-        tooltip.add(Component.translatable("item.lotaartifacts.armor_piercing_glove.tooltip.slot")
-                .withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
-    }
+        @Override
+        public java.util.List<net.minecraft.network.chat.Component> getAttributesTooltip(
+                        java.util.List<net.minecraft.network.chat.Component> tooltips, ItemStack stack) {
+                return new java.util.ArrayList<>();
+        }
+
+        @Override
+        public boolean canEquip(SlotContext slotContext, ItemStack stack) {
+                return slotContext.identifier().equals("hands");
+        }
+
+        @Override
+        public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid,
+                        ItemStack stack) {
+                Multimap<Attribute, AttributeModifier> modifiers = ICurioItem.super.getAttributeModifiers(slotContext,
+                                uuid,
+                                stack);
+
+                try {
+                        Attribute armorNegation = ForgeRegistries.ATTRIBUTES
+                                        .getValue(new ResourceLocation("epicfight", "armor_negation"));
+                        if (armorNegation != null) {
+                                modifiers.put(armorNegation,
+                                                new AttributeModifier(
+                                                                UUID.fromString("e5c3b2a1-0000-0000-0000-000000000000"),
+                                                                "Armor Piercing Glove Bonus", 100.0,
+                                                                AttributeModifier.Operation.ADDITION));
+                        }
+                } catch (Exception e) {
+                }
+
+                return modifiers;
+        }
+
+        @Override
+        public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
+                super.appendHoverText(stack, level, tooltip, flag);
+
+                tooltip.add(Component.literal(""));
+                tooltip.add(Component.translatable("item.lotaartifacts.armor_piercing_glove.tooltip.title")
+                                .withStyle(ChatFormatting.RED, ChatFormatting.BOLD));
+                tooltip.add(Component.translatable("item.lotaartifacts.armor_piercing_glove.tooltip.line1")
+                                .withStyle(ChatFormatting.GRAY));
+                tooltip.add(Component.translatable("item.lotaartifacts.armor_piercing_glove.tooltip.line2_1")
+                                .withStyle(ChatFormatting.GRAY));
+                tooltip.add(Component.translatable("item.lotaartifacts.armor_piercing_glove.tooltip.line2_2")
+                                .withStyle(ChatFormatting.GRAY));
+                tooltip.add(Component.literal(""));
+                tooltip.add(Component.translatable("item.lotaartifacts.armor_piercing_glove.tooltip.slot")
+                                .withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
+        }
 }

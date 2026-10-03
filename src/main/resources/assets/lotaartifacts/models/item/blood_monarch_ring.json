@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/ring/blood_monarch_ring/blood_monarch_ring"
+  }
+}

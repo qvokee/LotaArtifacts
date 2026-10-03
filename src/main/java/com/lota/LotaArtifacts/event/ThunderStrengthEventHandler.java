@@ -40,12 +40,8 @@ public class ThunderStrengthEventHandler {
             return;
         }
 
-        com.mojang.logging.LogUtils.getLogger().info("DEBUG DAMAGE: Source ID: " + event.getSource().getMsgId());
-        event.getSource().typeHolder().unwrapKey().ifPresent(key -> 
-            com.mojang.logging.LogUtils.getLogger().info("DEBUG DAMAGE: Type Key: " + key.location())
-        );
-
-        if (event.getSource().is(DamageTypeTags.IS_LIGHTNING) || event.getSource().getMsgId().equals("lightning_bolt") || event.getSource().getMsgId().contains("lightning")) {
+        if (event.getSource().is(DamageTypeTags.IS_LIGHTNING) || event.getSource().getMsgId().equals("lightning_bolt")
+                || event.getSource().getMsgId().contains("lightning")) {
             applyRingEffect(event.getEntity());
         }
     }

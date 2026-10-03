@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/glove/regen_on_poison_glove/regen_on_poison_glove"
+  }
+}

@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/amulet/combat_resonance_amulet/combat_resonance_amulet"
+  }
+}

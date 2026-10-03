@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "lotaartifacts:fire_quiver",
+    "lotaartifacts:poison_quiver",
+    "lotaartifacts:haste_quiver",
+    "lotaartifacts:crusher_quiver",
+    "lotaartifacts:health_quiver",
+    "lotaartifacts:order_quiver",
+    "lotaartifacts:hatred_quiver"
+  ]
+}

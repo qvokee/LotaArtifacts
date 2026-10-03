@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/gauntlet/shatter_strengthening_gauntlet/shatter_strengthening_gauntlet"
+  }
+}

@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/ring/orvius_unbreakability_ring/orvius_unbreakability_ring"
+  }
+}

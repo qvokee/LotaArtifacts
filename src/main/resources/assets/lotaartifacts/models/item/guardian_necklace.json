@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lotaartifacts:item/necklace/guardian_necklace/guardian_necklace"
+  }
+}

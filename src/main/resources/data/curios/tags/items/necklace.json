@@ -1,6 +1,22 @@
 {
     "replace": false,
     "values": [
-        "lotaartifacts:mana_restoration_necklace"
+        "lotaartifacts:mana_restoration_necklace",
+        "lotaartifacts:magic_resist_necklace",
+        "lotaartifacts:berserker_necklace",
+        "lotaartifacts:guardian_necklace",
+        "lotaartifacts:frozen_in_ice_amulet",
+        "lotaartifacts:gift_and_curse_amulet",
+        "lotaartifacts:magic_reflection_amulet",
+        "lotaartifacts:lich_amulet",
+        "lotaartifacts:mana_absorption_amulet",
+        "lotaartifacts:living_curse_amulet",
+        "lotaartifacts:weightless_armor_amulet",
+        "lotaartifacts:combat_resonance_amulet",
+        "lotaartifacts:endless_life_amulet",
+        "lotaartifacts:heavyweight_amulet",
+        "lotaartifacts:blood_cult_amulet",
+        "lotaartifacts:son_of_night_amulet",
+        "lotaartifacts:living_corpse_amulet"
     ]
 }

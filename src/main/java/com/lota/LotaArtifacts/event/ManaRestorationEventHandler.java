@@ -25,8 +25,9 @@ public class ManaRestorationEventHandler {
 
         CuriosApi.getCuriosInventory(player).ifPresent(handler -> {
             handler.findFirstCurio(ModItems.MANA_RESTORATION_NECKLACE.get()).ifPresent(slotResult -> {
-                MobEffect instantManaEffect = ForgeRegistries.MOB_EFFECTS.getValue(new net.minecraft.resources.ResourceLocation("irons_spellbooks", "instant_mana"));
-                
+                MobEffect instantManaEffect = ForgeRegistries.MOB_EFFECTS
+                        .getValue(new net.minecraft.resources.ResourceLocation("irons_spellbooks", "instant_mana"));
+
                 if (instantManaEffect != null) {
                     player.addEffect(new MobEffectInstance(instantManaEffect, 1, 0));
                 }

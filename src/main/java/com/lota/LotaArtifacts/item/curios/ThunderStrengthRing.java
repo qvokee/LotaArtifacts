@@ -19,6 +19,11 @@ public class ThunderStrengthRing extends Item implements ICurioItem {
     }
 
     @Override
+    public java.util.List<Component> getAttributesTooltip(java.util.List<Component> tooltips, ItemStack stack) {
+        return new java.util.ArrayList<>();
+    }
+
+    @Override
     public boolean canEquip(SlotContext slotContext, ItemStack stack) {
         return slotContext.identifier().equals("ring");
     }
@@ -26,7 +31,7 @@ public class ThunderStrengthRing extends Item implements ICurioItem {
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
         super.appendHoverText(stack, level, tooltip, flag);
-        
+
         tooltip.add(Component.literal(""));
         tooltip.add(Component.translatable("item.lotaartifacts.thunder_strength_ring.tooltip.title")
                 .withStyle(ChatFormatting.YELLOW, ChatFormatting.BOLD));
