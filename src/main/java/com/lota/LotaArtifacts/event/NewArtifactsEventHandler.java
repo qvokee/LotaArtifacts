@@ -217,8 +217,12 @@ public class NewArtifactsEventHandler {
             if (player.getHealth() / player.getMaxHealth() <= 0.25f) {
                 CuriosApi.getCuriosInventory(player).ifPresent(handler -> {
                     handler.findFirstCurio(ModItems.FROZEN_IN_ICE_AMULET.get()).ifPresent(slot -> {
-                        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, 9));
-                        player.addEffect(new MobEffectInstance(ModEffects.FROZEN_IN_ICE.get(), 100, 0));
+                        ItemStack stack = slot.stack();
+                        if (!player.getCooldowns().isOnCooldown(stack.getItem())) {
+                            player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, 9));
+                            player.addEffect(new MobEffectInstance(ModEffects.FROZEN_IN_ICE.get(), 100, 0));
+                            player.getCooldowns().addCooldown(stack.getItem(), 3000);
+                        }
                     });
                 });
             }
@@ -290,13 +294,13 @@ public class NewArtifactsEventHandler {
                 });
                 handler.findFirstCurio(ModItems.SON_OF_NIGHT_AMULET.get()).ifPresent(slot -> {
                     if (player.isShiftKeyDown()) {
-                        player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20, 29));
+                        player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20, 14));
                         player.removeEffect(MobEffects.INVISIBILITY);
                         removeEffect(player, "monsterexpansion:cloaked");
                         removeEffect(player, "irons_spellbooks:true_invisibility");
                     } else {
                         MobEffectInstance speedInstance = player.getEffect(MobEffects.MOVEMENT_SPEED);
-                        if (speedInstance != null && speedInstance.getAmplifier() == 29
+                        if (speedInstance != null && speedInstance.getAmplifier() == 14
                                 && speedInstance.getDuration() <= 20) {
                             player.removeEffect(MobEffects.MOVEMENT_SPEED);
                         }
@@ -693,4 +697,3 @@ public class NewArtifactsEventHandler {
     }
 
 }
-
